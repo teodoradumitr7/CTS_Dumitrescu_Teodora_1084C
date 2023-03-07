@@ -18,21 +18,35 @@ public class ReaderStudent extends ReaderAplicant {
 		List<Aplicant> studenti = new ArrayList<Aplicant>();
 
 		while (input.hasNext()) {
-			String nume = input.next();
-			String prenume = (input.next()).toString();
-			int varsta = Integer.valueOf(input.nextInt());
-			int punctaj = Integer.valueOf(input.nextInt());
-			int nr = Integer.valueOf(input.nextInt());
-			String[] vect = new String[5];
-			for (int i = 0; i < nr; i++)
-				vect[i] = input.next();
-			int an_studii = input.nextInt();
-			String facultate = (input.next()).toString();
-			Student s = new Student(nume, prenume, varsta, punctaj, nr, vect, facultate, an_studii);
-			studenti.add(s);
+			Student student=new Student();
+			super.readAplicant(input, student);
+			student.setAn_studii(input.nextInt());
+            student.setFacultate(input.next());
+            studenti.add(student);
 		}
 		input.close();
 		return studenti;
 	}
 
+	/*
+	  public StudentReader(String file) throws FileNotFoundException {
+        super(file);
+    }
+
+    @Override
+    public List<Aplicant> readAplicanti() throws FileNotFoundException {
+        super.scanner.useDelimiter(",|\n");
+        List<Aplicant> studenti = new ArrayList<>();
+
+        while (super.scanner.hasNext()) {
+            Student student = new Student();
+            readAplicant(super.scanner, student);
+            student.setAn_studii(super.scanner.nextInt());
+            student.setFacultate(super.scanner.next());
+            studenti.add(student);
+        }
+        super.scanner.close();
+        return studenti;
+    }
+	 */
 }

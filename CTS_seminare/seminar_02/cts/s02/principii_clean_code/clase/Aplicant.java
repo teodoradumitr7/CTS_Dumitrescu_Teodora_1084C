@@ -1,7 +1,4 @@
 package cts.s02.principii_clean_code.clase;
-//de sters getteri pe care nu ii folosim
-//de sters constructorii cu param
-//input2 trb sa fie scanner
 
 public abstract class Aplicant {
 	protected String nume;

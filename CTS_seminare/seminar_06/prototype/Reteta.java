@@ -22,6 +22,9 @@ public class Reteta implements IReteta {
 		this.nume = nume;
 		this.solutii = solutii;
 
+		if(solutii.get("sol")!=null) {
+			solutii.get("sol");
+		}
 		float sum = 0;
 		for (float gramajSolutie : solutii.values()) {
 			sum += gramajSolutie;

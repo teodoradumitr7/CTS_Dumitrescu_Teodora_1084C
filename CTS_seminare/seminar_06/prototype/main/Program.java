@@ -23,6 +23,7 @@ public class Program {
 		Reteta laborator=(Reteta) prototype.copiaza();
 		laborator.setNume("RetetaLaborator");
 		System.out.println(laborator.toString());
+		
 
 	}
 

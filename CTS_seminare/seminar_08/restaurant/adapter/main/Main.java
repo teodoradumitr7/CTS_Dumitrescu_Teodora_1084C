@@ -2,6 +2,7 @@ package restaurant.adapter.main;
 
 import restaurant.adapter.bar.ISoftBar;
 import restaurant.adapter.bar.SoftBar;
+import restaurant.adapter.bucatarie.AdapterObiecteRestaurant;
 import restaurant.adapter.bucatarie.AdapterRestaurant;
 import restaurant.adapter.bucatarie.Bucatarie;
 import restaurant.adapter.bucatarie.ISoftRestaurant;
@@ -28,6 +29,9 @@ Main.imprimare(bucatarie, 300.0);
 
 AdapterRestaurant adapter=new AdapterRestaurant("Alcadibo");
 Main.imprimare(adapter, 400.0);
+
+AdapterObiecteRestaurant adapterObj=new AdapterObiecteRestaurant(bar);
+Main.imprimare(adapterObj, 400.0);
 	}
 
 }
